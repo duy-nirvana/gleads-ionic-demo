@@ -1,11 +1,12 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App';
+import React from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import axios from 'axios';
+import { setupAxios } from "./setupAxios";
 
-const container = document.getElementById('root');
+const container = document.getElementById("root");
 const root = createRoot(container!);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+
+setupAxios(axios);
+
+root.render(<App />);
